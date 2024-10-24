@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+   <title>SK Traders</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/logoicon.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+
+  <style>
+    .topimg {
+  /* background: url('src/assets/2148106905 crop.jpg') no-repeat bottom center/cover; */
+   backdrop-filter: blur(5px);
+   width: 100vw; /* Full viewport width */
+   height: 30ch; /* Full viewport height */
+   background-size: cover; /* Ensures the image covers the entire container */
+   overflow: hidden; /* Ensures no scroll bars appear */
+  /* z-index: 2; */
+}
+
+/* Adding the gradient */
+.topimg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Fading black */
+  z-index: 1;
+}
+
+.topimg h3 {
+  position: relative;
+  z-index: 2; /* Ensure the text stays above the gradient */
+  margin: 0;
+  padding: 20px;
+  padding-left: 4ch;
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  color: white;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  margin-top: 4ch;
+}
+
+.about1st{
+  margin-left: 12ch;
+  margin-right: 12ch;
+}
+@media (max-width: 768px) {
+  .about1st{
+    margin-left: 3ch;
+    margin-right: 3ch;
+  }
+
+  .custom-img {
+    height: auto; /* Let height adjust automatically on small screens */
+    width: 100%;  /* Make sure it takes full width on small screens */
+  }
+
+  .explore {
+    margin-top: 1ch;
+  }
+
+  .styled-button{
+    margin-top: 1ch;
+  }
+
+  .custom-img1 {
+    height: 40ch;
+    width: 100%; /* Full width within its column */
+    object-fit: cover; /* Keeps the image proportionate */
+    margin-bottom: 4ch;
+    margin-top: 6ch;
+  }
+}
+
+.service-item {
+  flex-direction: column;
+  text-align: center;
+}
+
+.service-icon {
+  margin-right: 0;
+  margin-bottom: 0.25rem; /* Adjust margin for mobile view */
+}
+
+.img-fluid {
+  border-radius: 0.5rem;
+  height: 70px;
+  width: 70px;
+  color: rgb(97, 65, 24);
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.about-us-section p{
+  font-size: 20px;
+  color: rgb(102, 102, 102);
+  font-weight: 500;
+}
+
+.explore {
+  margin-top: 5ch;
+}
+
+.explore p{
+  font-size: 40px;
+  color: black;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.button-container {
+  text-align: center;
+  padding: 35px;
+}
+
+.styled-button {
+  padding: 10px 25px;
+  border: 1px solid #999897;
+  border-radius: 35px;
+  background: transparent;
+  cursor: pointer;
+  color: #6e6e6d;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+  font-size: 20px;
+}
+.styled-button:hover {
+  /* background-color: #9b7037; */
+  border: 1px solid #9b7037;
+  color: #9b7037;
+}
+
+.selected {
+  /* background-color: #9b7037; */
+  color: #9b7037;
+  border-color: #9b7037;
+}
+
+.custom-img {
+  height: 32ch;
+  width: 100%; /* Full width within its column */
+  object-fit: cover; /* Keeps the image proportionate */
+  margin-bottom: 2ch;
+  margin-top: 2ch;
+}
+
+.content{
+  margin-bottom: 4ch;
+  margin-top: 10ch;
+}
+
+.custom-img1 {
+  height: 40ch;
+  width: 100%; /* Full width within its column */
+  object-fit: cover; /* Keeps the image proportionate */
+}
+
+.content h4{
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.content p{
+  padding: 10px;
+  font-size: 18px;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.mapdata {
+  margin: 6ch;
+ }
+
+ .mapdata h4{
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;  
+  margin-left: 2ch;
+ }
+
+ .mapdata p{
+  font-size: 17px;
+  color: rgb(87, 87, 87);
+  margin-left: 7ch;
+  margin-top: 2ch;
+ justify-items: center;
+ }
+
+ .accordion {
+    max-width: 650px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+}
+
+.accordion-item label{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif; 
+}
+
+.accordion-header {
+    display: block;
+    padding: 10px;
+    background-color: #FFFBEE;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+}
+
+.accordion-header span {
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #F5F0E1;
+    border: 1px solid #F5F0E1;
+    border-radius: 5px;
+}
+
+.accordion-content p {
+    padding: 5px 7px 15px 15px ;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Expand content when checked */
+input[type="radio"]:checked + label + .accordion-content {
+    max-height: 100px; /* Adjust based on content height */
+}
+
+/* Rotate arrow when content is open */
+input[type="radio"]:checked + label span {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .mapdata{
+    margin: 2ch;
+  }
+
+  .mapdata h4{
+    margin-left: 0;
+  }
+
+  .mapdata p{
+    margin-left: 1ch;
+  }
+}
+  </style>
+
+</head>
+
+<body style="background-color: #FFFBEE;">
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+  <header id="page-heading">
+      <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #FFFBEE; border-bottom: 0.5px solid rgb(107, 104, 104);" >
+    <div class="container-fluid d-flex justify-content-between">
+      <!-- Logo and brand name on the left -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/images/logomain.png" alt="Logo" class="logo" style="height: 50px; margin-right: 10px;"> <!-- Adjust the size of the logo -->
+        <!-- <div class="brand-text">
+          <div class="prehed-bold" style="font-weight: bold;">SAIKRISHNA</div>
+          <div class="prehed-small">Plywood & Hardware</div>
+        </div> -->
+      </a>
+
+      <!-- Navbar toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links on the right -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- justify-content-end pushes the items to the right -->
+        <ul class="navbar-nav" style="font-size: 1rem; font-weight: bold;">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="plywood.html">Plywood Dealership</a></li>
+              <li><a class="dropdown-item" href="steel.html">Steel Products</a></li>
+              <li><a class="dropdown-item" href="hardware.html">Hardware Solution</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-light" href="contactus.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <div>
+    <div class="topimg" style="background-image:url('assets/images/2148106905 crop.jpg') ; background-repeat: no-repeat; background-position: center; background-size: cover;">
+      <h3>Steel Products</h3>
+    </div>
+  
+    <div class="about1st">
+      <div class="row content">
+        <div class="col-lg-4 col-md-3 col-sm-12 ">
+          <img src="assets/images/Frame 48096216.png" alt="Interior Design" class=" custom-img1">
+        </div>
+        <div class="col-lg-8 col-md-9 col-sm-12">
+          <h4>Where Strength Meets Versatility: Explore Our <span style="color:#b87d30;">Premium Steel Range</span></h4>
+          <p>At Sri Krishna Traders, we believe steel is more than just a building material—it's the foundation of strength and innovation. Our high-grade steel products, crafted with precision and advanced technology, offer unmatched durability and versatility. Whether for construction or industrial use, our steel elevates every project with lasting quality and performance.</p>
+        </div>
+      </div>
+  
+      <div class="about-us-section" style="margin-top: 6ch;">
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+              <img src="assets/images/Fire-Resistant.svg" alt="Interior Design" class="img-fluid" >
+              <p >Fire Resistance</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+              <img src="assets/images/Corrosion-Resistant.svg" alt="Interior Design" class="img-fluid">
+              <p >Corrosion - Resistant</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <img src="assets/images/Long-Term Warranty.svg" alt="Interior Design" class="img-fluid">
+              <p >Long-Term Warrenty</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+              <img src="assets/images/High Tensile Strength.svg" alt="Interior Design" class="img-fluid">
+              <p >High Tensile Strebgth</p>
+          </div>
+          <!-- <div class="col-lg-3 col-md-6 col-sm-12">
+              <img src="assets/images/Certified Quality.svg" alt="Interior Design" class="img-fluid">
+              <p >Certifire Quality</p>
+          </div> -->
+        </div>
+      </div>
+  
+      <div class="text-center explore">
+        <p>Experience Durability: Explore </p>
+        <p style="margin-top: -1ch;">Our Innovative Steel Offerings</p>
+  
+        <div class="button-container">
+          <button
+            class="styled-button me-3"
+            [ngClass]="{'selected': true}">
+            <i class="fa-solid fa-house me-2"></i>All
+          </button>
+  
+          <button
+            class="styled-button me-3"
+            [ngClass]="{'selected': true}">
+            <i class="fa-solid fa-award"></i> Best Saller
+          </button>
+  
+          <button
+            class="styled-button me-3"
+            [ngClass]="{'selected': true}">
+            <i class="fa-solid fa-gifts"></i> New
+          </button>
+  
+          <button
+            class="styled-button"
+            [ngClass]="{'selected': true}">
+            <i class="fa-solid fa-upload"></i> UpComming
+          </button>
+        </div>
+  
+        <div class=" mt-3" >
+          <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/Frame 48096216.png" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/Frame 4809621733.png" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/Frame 480962255.png" alt="Interior Design" class=" custom-img">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/Frame 48096219.png" alt="Interior Design" class=" custom-img">
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/steel.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/Frame 48096216.png" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class=" mt-3" >
+          <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/2150692407.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/modern-minimalist-office.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/2151780716.jpg" alt="Interior Design" class=" custom-img">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/2151780716.jpg" alt="Interior Design" class=" custom-img">
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/2150692407.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/modern-minimalist-office.jpg" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class=" mt-3" >
+          <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/hardware.jfif" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/image 26.png" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/Frame 48096217.png" alt="Interior Design" class=" custom-img">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <img src="assets/images/Frame 48096217.png" alt="Interior Design" class=" custom-img">
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-6">
+                  <img src="assets/images/Frame 48096218.png" alt="Interior Design" class=" custom-img">
+                </div>
+                <div class="col-6">
+                  <img src="assets/images/Hardware.png" alt="Interior Design" class=" custom-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+    <div class="row" style="margin-top: 10ch;">
+      <div class="col-lg-5 col-md-6 col-sm-12">
+        <div class="mapdata">
+          <h4>Frequently Asked</h4>
+          <h4 style="color: #4d3214;">Questions</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis sint veniam minus nihil nulla quo deserunt, esse velit explicabo ipsam!</p>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-6 col-sm-12">
+        <div class="accordion">
+          <div class="accordion-item">
+              <input type="radio" id="question1" name="accordion" checked>
+              <label for="question1" class="accordion-header">Question 1 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio beatae rerum labore dicta laboriosam ipsam cupiditate, repellendus hic nostrum voluptate odio. Inventore aliquid molestias ipsa facilis consequatur iusto minus reprehenderit accusantium, aperiam quia deleniti minima officiis modi suscipit enim soluta id architecto eaque. Distinctio quidem eum aliquid vitae laborum?</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <input type="radio" id="question2" name="accordion">
+              <label for="question2" class="accordion-header">Question 2 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>This is the answer to question 2.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <input type="radio" id="question3" name="accordion">
+              <label for="question3" class="accordion-header">Question 3 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, perferendis, officiis earum molestias nobis optio quos nulla aut odio, laboriosam itaque enim quisquam. Alias officia voluptatum obcaecati quis ad? Obcaecati soluta sit illo optio ut tenetur beatae magni delectus nisi molestias minima unde voluptate consequatur qui recusandae, omnis consectetur velit doloribus maiores minus. Eligendi voluptates totam ex explicabo quas quam commodi illum voluptatibus, excepturi pariatur id eaque exercitationem quod distinctio eum deserunt voluptatum similique necessitatibus esse enim quisquam qui ab saepe repellendus. Incidunt reprehenderit iste inventore fugiat dicta cumque, optio voluptate! Eius sit laboriosam iusto placeat, aliquam ratione asperiores a.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <input type="radio" id="question4" name="accordion">
+              <label for="question4" class="accordion-header">Question 4 <span>&#9660;</span></label>
+              <div class="accordion-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe aliquam ipsa ullam qui voluptatem, temporibus incidunt quis numquam? Fugiat, nostrum incidunt! Excepturi animi, asperiores dolore iusto ullam voluptatum maxime recusandae officia porro voluptatibus facilis reiciendis quaerat quibusdam optio eaque beatae, accusantium dolor nemo tempore facere dolorem repellendus! Ea similique, harum vitae iste odit vero animi facere, hic ipsum iure odio cupiditate exercitationem nihil laudantium eius sapiente commodi praesentium nulla. Perspiciatis vitae excepturi maxime sit ullam impedit, id perferendis vero quod aliquam! Atque qui vitae architecto, delectus a sed quia, laborum consequuntur quis molestias itaque repellat quibusdam ducimus! Repudiandae sequi, omnis, in facere sed exercitationem dolore vel quasi accusamus debitis ab, facilis vitae placeat aliquam! Veritatis dolor porro iste doloremque, deleniti aliquam dignissimos voluptatem sequi est minima. Harum iste facere quod, veritatis aperiam, laborum impedit possimus consectetur eum sunt, rem tempore. Facere, repellat. Voluptatum dolorem tenetur corrupti recusandae dolores cumque dolore ex quibusdam ducimus at rerum, debitis perferendis nulla voluptate error natus, ea magnam modi fuga nostrum consequuntur voluptatibus blanditiis. Iure earum consequuntur quaerat quasi voluptatum consequatur sit sed molestias exercitationem, provident, reiciendis numquam unde nisi fuga laborum suscipit saepe, laboriosam at nam repudiandae ex. Tempora dolor veritatis, atque ad minima voluptates nihil ipsum obcaecati omnis natus tempore doloribus id dignissimos voluptate quisquam architecto vel quo sit, labore in quidem culpa minus. Magni non nam nisi quam soluta voluptates in harum iusto distinctio doloremque ex impedit blanditiis enim repellat accusantium cupiditate rerum laborum illo suscipit quidem, voluptatum voluptas quis. Aliquam, praesentium dolore reiciendis qui pariatur voluptatum eligendi id, est repellendus repudiandae doloremque error aspernatur laborum. Sed, aliquam officia, est iste nobis corrupti repudiandae ad non explicabo ratione facere accusantium, atque laudantium fugit deleniti inventore! Debitis ipsa nemo quidem quos non ullam animi autem blanditiis voluptatibus cupiditate. Vel, necessitatibus. Quasi dolorum iusto reiciendis optio impedit nihil perferendis a! Sed quaerat, accusamus modi a est ipsa, dicta adipisci fugiat autem animi, pariatur eum consequatur iusto perferendis corrupti ducimus porro atque harum quis quos totam! Quibusdam sequi dignissimos omnis animi neque porro aut a voluptatum vitae maxime natus tempore sint, doloribus distinctio error. Saepe nemo voluptates neque odio quaerat perferendis commodi assumenda rem esse at reiciendis et cupiditate ducimus pariatur eveniet officia unde tempore, doloribus, amet nobis dolor inventore sequi nostrum! Id nostrum omnis commodi cumque sunt unde, accusantium reprehenderit exercitationem hic ipsum nobis itaque tempore ducimus et doloribus nisi quas mollitia fugiat voluptatum.</p>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+  
+
+  <div>
+    <div class="row" style="position: relative;">
+      <div class="footer" >
+        <div class="about1st " style="margin-top: 8ch;">
+          <div class="row foottext">
+          <div class="col-lg-5 col-md-12 col-sm-12">
+            <img src="assets/images/logomain.png" alt="Logo" style="height: 60px; width: 70%; margin-bottom: 1ch;">
+            <p>Established in 2011, Sai Krishna Traders is a leading supplier of high-quality building materials,
+              including plywood, steel pipes, aluminum, and household hardware. Located in Bhadrak, Odisha,
+              we are committed to providing durable and reliable products to meet all your construction needs.</p>
+              <div class="social-icons">
+                <a href="" style="text-decoration: none;"><i class="fa-brands fa-facebook "></i></a>
+                <a href="" style="text-decoration: none;"><i class="fa-brands fa-twitter "></i></a>
+                <a href="" style="text-decoration: none;"><i class="fa-brands fa-instagram "></i></a>
+                <a href="" style="text-decoration: none;"><i class="fa-brands fa-youtube "></i></a>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <h4>Quick Link</h4>
+            <a href="index.html" style="text-decoration: none;"><p>Home</p></a>
+            <a href="aboutus.html" style="text-decoration: none;"><p>About</p></a>
+            <a href="privacypolicy.html" style="text-decoration: none;"><p>Privacy Policy</p></a>
+            <a href="return policy.html" style="text-decoration: none;"><p>Return Policy</p></a>
+            <a href="contactus.html" style="text-decoration: none;"><p>Contact Us</p></a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <h4>Product</h4>
+            <a href="plywood.html" style="text-decoration: none;"><p>Plywood Dealership</p></a>
+            <a href="steel.html" style="text-decoration: none;"><p>Steel Products</p></a>
+            <a href="hardware.html" style="text-decoration: none;"><p>Hardware Solutions</p></a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-phone-volume"></i>&nbsp;&nbsp;+91 7008011757</p>
+            <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;saikrishnapvc@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Saikrishna Traders, ByPass, Bhadrak
+              Odisha-756100
+              Near Reliance Trends</p>
+          </div>
+          <hr style="color: white; margin-top: 5ch;">
+          <p>Coppyright @2024 Saikrishna Traders</p>
+        </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  
+  
+  
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/images/js/owl-carousel.js"></script>
+  <script src="assets/images/js/animation.js"></script>
+  <script src="assets/images/js/imagesloaded.js"></script>
+  <script src="assets/images/js/popup.js"></script>
+  <script src="assets/images/js/custom.js"></script>
+  <script src="console.js"></script>
+</body>
+
+</html>
